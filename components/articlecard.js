@@ -15,15 +15,12 @@ const ArticleCard = () => {
             Virtual reality experince for the PSV fans!
           </Text>
           <Text style={styles.articleDescription} numberOfLines={3}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-            dolores, possimus pariatur animi temporibus nesciunt praesentium
-            dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque minus
-            soluta, voluptates neque explicabo tempora nisi culpa eius atque
-            dignissimos. Molestias explicabo corporis voluptatem?
+          Experience the excitement of a PSV game in virtual reality! Put on the VR headset and feel like you're right there in the stadium, cheering with the fans. 
+          It's a fun and unique way to enjoy football, bringing the game to life right before your eyes?
           </Text>
   
           <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}>Read More</Text>
+            <Text style={styles.buttonText}>Test it now!</Text>
           </TouchableOpacity>
         </View>
       </TouchableOpacity>
@@ -35,7 +32,7 @@ const ArticleCard = () => {
       overflow: "hidden",
       borderRadius: 12,
       backgroundColor: "#fff",
-      marginTop: 50, // Add margin top of 30px
+      marginTop: 30, // Add margin top of 30px
       margin: 20,
       shadowColor: "#000",
       shadowOpacity: 0.1,

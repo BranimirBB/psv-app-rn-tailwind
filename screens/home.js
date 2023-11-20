@@ -1,19 +1,22 @@
 // screens/home.js
 
-// HomeScreen.js in the /screens folder
 import React from 'react';
-import { ImageBackground, StyleSheet, SafeAreaView } from 'react-native';
-import ArticleCard from '../components/articlecard'; // Adjust the path according to your project structure
+import { ImageBackground, ScrollView, SafeAreaView, StyleSheet } from 'react-native';
+import ArticleCard from '../components/articlecard'; // Article card 1
+import ArticleCard2 from '../components/articlecard2';
 
 const HomeScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
+    <ScrollView style={styles.scrollViewStyle}>
       <ImageBackground 
-        source={require('../assets/homebg.png')} // Adjust the path to your background image
+        source={require('../assets/homebg.png')} // path to your background image
         style={styles.backgroundImage}
       >
         <ArticleCard /> 
+        <ArticleCard2 /> 
       </ImageBackground>
+    </ScrollView>
     </SafeAreaView>
   );
 };
@@ -21,9 +24,15 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   backgroundImage: {
     flex: 1,
-    resizeMode: 'cover', // or 'stretch'
+    resizeMode: 'cover', 
   },
-  // ... any other styles you want to add for the HomeScreen ...
+  flexContainer: {
+    flex: 1, // This will ensure the container takes up all available space
+  },
+  scrollViewStyle: {
+    // If you have specific styles for your ScrollView, they would go here
+  },
+  
 });
 
 export default HomeScreen;
