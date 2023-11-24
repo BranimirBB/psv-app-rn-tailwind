@@ -6,7 +6,7 @@ const AllModules = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ImageBackground 
-        source={require('../assets/homebg.png')} // path to your background image
+        source={require('../assets/homebg.png')} // path to background image
         style={styles.backgroundImage}
       >
       </ImageBackground>

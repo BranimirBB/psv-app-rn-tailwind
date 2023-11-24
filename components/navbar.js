@@ -1,51 +1,82 @@
 // Nav.js in the /components folder
 
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import tw from "twrnc";
+import { Ionicons } from "@expo/vector-icons";
 
 const Nav = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={tw`w-full bg-white absolute bottom-0`}>
-      <View style={tw`w-full h-1 bg-gray-300`} />
-      <View style={tw`flex flex-row items-center justify-between h-28 py-2`}>
-        <TouchableOpacity
-          style={tw`flex-1 items-center justify-center border-r border-gray-300`}
-          onPress={() => navigation.navigate("Home")}
-        >
-          <Text style={tw`text-gray-800 font-semibold text-lg`}>Home</Text>
-        </TouchableOpacity>
+    <View style={styles.navContainer}>
+      <TouchableOpacity
+        style={styles.navButton}
+        onPress={() => navigation.navigate("Home")}
+      >
+        <Ionicons name="home-outline" size={30} color="#62000D" />
+        <Text style={styles.navText}>Home</Text>
+      </TouchableOpacity>
 
-        <TouchableOpacity
-          style={tw`flex-1 items-center justify-center border-r border-gray-300`}
-          onPress={() => navigation.navigate("AllModules")}
-        >
-          <Text style={tw`text-gray-800 font-semibold text-lg`}>
-            <Text style={tw`text-center`}>All</Text>
-            {"\n"}
-            <Text style={[tw`text-gray-800 font-semibold`,{ lineHeight: 23, marginTop: -3 },]}>Modules</Text>
-          </Text>
-        </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.navButton}
+        onPress={() => navigation.navigate("AllModules")}
+      >
+        <Ionicons name="grid-outline" size={30} color="#62000D" />
+        <Text style={styles.navText}>All Modules</Text>
+      </TouchableOpacity>
 
-        <TouchableOpacity
-          style={tw`flex-1 items-center justify-center border-r border-gray-300`}
-          onPress={() => navigation.navigate("Feedback")}
-        >
-          <Text style={tw`text-gray-800 font-semibold text-lg`}>Feedback</Text>
-        </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.navButton}
+        onPress={() => navigation.navigate("Feedback")}
+      >
+        <Ionicons name="chatbubble-outline" size={30} color="#62000D" />
+        <Text style={styles.navText}>Feedback</Text>
+      </TouchableOpacity>
 
-        <TouchableOpacity
-          style={tw`flex-1 items-center justify-center`}
-          onPress={() => navigation.navigate("Profile")}
-        >
-          <Text style={tw`text-gray-800 font-semibold text-lg`}>Profile</Text>
-        </TouchableOpacity>
-      </View>
+      <TouchableOpacity
+        style={styles.navButton}
+        onPress={() => navigation.navigate("Profile")}
+      >
+        <Ionicons name="person-outline" size={30} color="#62000D" />
+        <Text style={styles.navText}>Profile</Text>
+      </TouchableOpacity>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  navContainer: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    backgroundColor: "white",
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    paddingVertical: 10,
+    paddingBottom: 20, // Bottom padding
+    position: "absolute",
+    bottom: 0,
+    width: "100%",
+    backgroundColor: "#FFFDFD",
+    shadowColor: "#62000D",
+    shadowOffset: {
+      width: 0,
+      height: -4, // Shadow on the top edge
+    },
+    shadowOpacity: 5, 
+    shadowRadius: 5,
+    elevation: 5, // for Android
+  },
+
+  navButton: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  navText: {
+    color: "#62000D",
+    fontSize: 12, 
+  },
+
+});
 
 export default Nav;

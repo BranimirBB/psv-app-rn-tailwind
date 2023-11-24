@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     articleContainer: {
         overflow: "hidden",
         borderRadius: 12,
-        backgroundColor: "#fff",
+        backgroundColor: "#F0F0F0",
         marginTop: 20, 
         margin: 20,
         shadowColor: "#000",
@@ -41,27 +41,27 @@ const styles = StyleSheet.create({
         elevation: 3, // Only for Android
       },
       articleImage: {
-        height: 224, // Tailwind h-56
+        height: 224, 
         width: "100%",
         resizeMode: "cover",
       },
       articleContent: {
-        padding: 16, // Tailwind p-4 sm:p-6
+        padding: 16, 
       },
       articleDate: {
-        color: "#6b7280", // Tailwind text-gray-500
-        fontSize: 10, // Tailwind text-xs
+        color: "#6b7280", 
+        fontSize: 10, 
         marginBottom: 4,
       },
       articleTitle: {
-        color: "#111827", // Tailwind text-gray-900
-        fontSize: 18, // Tailwind text-lg
+        color: "#111827", 
+        fontSize: 18, 
         fontWeight: "bold",
         marginTop: 2,
       },
       articleDescription: {
-        color: "#6b7280", // Tailwind text-gray-500
-        fontSize: 14, // Tailwind text-sm/relaxed
+        color: "#6b7280", 
+        fontSize: 14, 
         marginTop: 8,
       },
       button: {

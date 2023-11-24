@@ -2,21 +2,23 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
-const ArticleCard = () => {
+const ArticleCard4 = () => {
     return (
       <TouchableOpacity style={styles.articleContainer} activeOpacity={0.9}>
         <Image
-          source={require('../assets/vrpsv.png')} // vr picture
+          source={require('../assets/totobet.jpeg')} // boby cam picture
           style={styles.articleImage}
         />
         <View style={styles.articleContent}>
-          <Text style={styles.articleDate}>VR project members</Text>
+          <Text style={styles.articleDate}>TOTO - be part of the game!</Text>
           <Text style={styles.articleTitle}>
-            Virtual reality experince for the PSV fans!
+            Betting games
           </Text>
           <Text style={styles.articleDescription} numberOfLines={3}>
-          Experience the excitement of a PSV game in virtual reality! Put on the VR headset and feel like you're right there in the stadium, cheering with the fans. 
-          It's a fun and unique way to enjoy football, bringing the game to life right before your eyes?
+          Join in on the excitement with our new PSV betting games! 
+          Fans now have the chance to place bets on PSV matches and win amazing prizes. 
+          Whether you're predicting scores, player performances, or match outcomes, each bet brings you closer to winning exclusive PSV merchandise, tickets, or other unique rewards. 
+          It's a fun and engaging way to support your team and test your football predictions!
           </Text>
   
           <TouchableOpacity style={styles.button}>
@@ -32,7 +34,7 @@ const ArticleCard = () => {
       overflow: "hidden",
       borderRadius: 12,
       backgroundColor: "#F0F0F0",
-      marginTop: 30, 
+      marginTop: 30,
       margin: 20,
       shadowColor: "#000",
       shadowOpacity: 0.1,
@@ -70,7 +72,7 @@ const ArticleCard = () => {
       paddingVertical: 10,
       paddingHorizontal: 80,
       borderRadius: 20,
-      alignSelf: 'center', 
+      alignSelf: 'center', // Center button horizontally
     },
     buttonText: {
       color: 'white',
@@ -78,4 +80,4 @@ const ArticleCard = () => {
       fontWeight: 'bold',
     },
   });
-export default ArticleCard;
+export default ArticleCard4;
